@@ -1,6 +1,7 @@
-import './App.css';
+import './App.css'
 import {useState, useEffect} from 'react'
-import getGifs from './services/getGif';
+import getGifs from './services/getGif'
+import Gif from './componets/Gif'
 
 
 
@@ -16,13 +17,13 @@ export default function App() {
     <div className="App">
       <section className="App-content">
         {
-          gifs.map(singleGif => (
-            <div>
-               <h4>{singleGif.title}</h4>
-               <img src={singleGif.url} />
-            </div>
-           
-          ))
+          gifs.map(singleGif => 
+          <Gif 
+            key={singleGif.title}
+            url={singleGif.url} 
+            id= {setGifs.id} 
+          />
+          )
         }
       </section>
     </div>
