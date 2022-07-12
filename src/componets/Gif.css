@@ -1,13 +1,10 @@
 .Gif {
-    border: 1px solid #eee;
-    border-radius: 6px;
-    color: #fff;
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    margin: 16px;
-    padding: 32px;
-    width: 100;
+    width: auto;
+    max-width: 200px;
+    margin-bottom: 20px;
 }
 
 .Gif h4 {
@@ -19,3 +16,25 @@
 i {
     font-size: 80px;
 }
+/* List of gifs */
+:root {
+    --results-columns : 2
+}
+
+.container {
+    column-count: var( --results-columns);
+    column-gap: 40px;
+}
+
+@media (min-width: 700px) {
+   :root {
+    --results-columns:3
+   }
+
+}
+@media (min-width: 924px) {
+    :root {
+     --results-columns:4
+    }
+ 
+ }

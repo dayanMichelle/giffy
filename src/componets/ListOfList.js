@@ -1,28 +1,14 @@
-import { useEffect, useState } from "react";
-import getGifs from "../services/getGif";
 import Gif from "./Gif";
+import './Gif.css'
+import Spinner from "./Spinner";
 
-export default function ListOfList({ params }) {
-  const [loading, setLoading] = useState(false)
-  const { keyword }= params
-  const [gifs, setGifs] = useState([]);
-
-  useEffect(() => {
-    setLoading(true)
-    getGifs({ keyword })
-      .then((gifs) => {
-        setGifs(gifs)
-        setLoading(false)
-      });
-  }, [keyword]);
-
-  if(loading) return <i>Cargando 💜</i>
+export default function ListOfList({ keyword ,gifs}) {
 
   return (
-    <>
+    <div className="container">
       {gifs.map(({ id, title, url }) => (
         <Gif id={id} key={title} title={title} url={url} />
       ))}
-    </>
+    </div>
   );
 }
