@@ -1,5 +1,4 @@
 import './App.css'
-import ListOfList from './componets/ListOfList'
 import {Link,  Route } from 'wouter';
 import Home from './pages/Home';
 import SearchResults from './pages/SearchResults';
@@ -11,7 +10,7 @@ export default function App() {
     <div className="App">
       <section className="App-content">
         <Link to='/'>
-          <img width={150} src='https://marcas-logos.net/wp-content/uploads/2019/12/Pinterest-logo.png' />
+          <img width={150}  src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Yoigo_morado.svg/1200px-Yoigo_morado.svg.png' />
         </Link>
         <Route component={Home} path="/" />
         <Route 

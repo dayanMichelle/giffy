@@ -1,3 +1,4 @@
+import { memo } from "react";
 import ListOfList from "../../componets/ListOfList";
 import Spinner from "../../componets/Spinner";
 import { useGifs } from "../../hooks/useGifs";
@@ -8,4 +9,4 @@ const SearchResults = ({ params }) => {
   return loading ? <Spinner /> : <ListOfList gifs={gifs} keyword={keyword} />;
 };
 
-export default SearchResults;
+export default memo(SearchResults);

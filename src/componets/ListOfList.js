@@ -1,6 +1,5 @@
 import Gif from "./Gif";
 import './Gif.css'
-import Spinner from "./Spinner";
 
 export default function ListOfList({ keyword ,gifs}) {
 
